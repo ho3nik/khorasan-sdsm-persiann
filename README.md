@@ -1,5 +1,7 @@
 # khorasan-sdsm-persiann
 
+**Paper (PDF):** https://ho3nik.github.io/khorasan-sdsm-persiann/paper.pdf
+
 SDSM-style statistical downscaling of daily rainfall, using either rain-gauge records or PERSIANN-CDR satellite cells as the local target (predictand). It accompanies the preprint:
 
 > F. Nikzat and H. Nikzat. *PERSIANN-CDR satellite precipitation as an alternative predictand for SDSM downscaling of CanESM2 rainfall in Khorasan Razavi, Iran.* Preprint (analysis carried out in 2021).
