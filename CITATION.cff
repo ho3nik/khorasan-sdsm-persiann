@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the preprint and this repository."
+title: "ksdsm: SDSM-style downscaling of daily rainfall with gauge or PERSIANN-CDR predictands"
+version: 0.1.0
+date-released: 2026-11-27
+license: MIT
+authors:
+  - family-names: Nikzat
+    given-names: Hossein
+  - family-names: Nikzat
+    given-names: Faezeh
+    affiliation: "Ferdowsi University of Mashhad"

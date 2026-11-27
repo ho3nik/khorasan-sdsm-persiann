@@ -1,0 +1,21 @@
+# Same design with PERSIANN-CDR cells as the predictand (record starts in 1983).
+predictand     = "../data/persiann_predictand.csv"   # from: python -m ksdsm persiann-cells
+sites          = "../data/persiann_sites.csv"
+predictor_root = "../data/predictors"
+out_dir        = "../results/persiann"
+
+gcm_calendar     = "365_day"
+standardize_base = [1961, 1990]
+scenarios        = ["rcp26", "rcp45", "rcp85"]
+
+[periods]
+calibration = [1983, 1998]
+validation  = [1999, 2005]
+base        = [1983, 2005]
+future      = [2028, 2050]
+
+[model]
+grouping     = "season"
+n_ensemble   = 20
+n_predictors = 4
+tune_bias    = true

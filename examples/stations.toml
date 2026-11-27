@@ -1,0 +1,28 @@
+# Configuration matching the 2021 study design for the 12 gauge stations.
+# Paths are relative to this file. The gauge data are not included in this repository.
+predictand     = "../data/stations_predictand.csv"   # date + one column per station, mm/day, -99 = missing
+sites          = "../data/stations_sites.csv"        # site,lat,lon
+predictor_root = "../data/predictors"                # <root>/<site>/{ncep,historical,rcp26,rcp45,rcp85}/*.dat
+out_dir        = "../results/stations"
+
+ncep_start       = "1961-01-01"
+gcm_hist_start   = "1961-01-01"
+gcm_future_start = "2006-01-01"
+gcm_calendar     = "365_day"
+standardize_base = [1961, 1990]
+scenarios        = ["rcp26", "rcp45", "rcp85"]
+
+[periods]
+calibration = [1975, 1990]
+validation  = [1991, 2005]
+base        = [1975, 2005]
+future      = [2020, 2050]
+
+[model]
+grouping     = "season"   # month | season | annual
+n_ensemble   = 20
+n_predictors = 4          # screened automatically; or set predictors = ["mslpgl", ...]
+tune_bias    = true
+
+[model.overrides.Akhlamad]   # the 2021 study used monthly sub-models at this station
+grouping = "month"

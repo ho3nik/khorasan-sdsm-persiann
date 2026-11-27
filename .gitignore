@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+results/
+demo_run/
+data/*
+!data/README.md
+*.nc

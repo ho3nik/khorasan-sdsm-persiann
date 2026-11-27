@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ksdsm"
+version = "0.1.0"
+description = "SDSM-style statistical downscaling of daily rainfall with gauge or PERSIANN-CDR predictands (2026 reimplementation of a 2021 workflow)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Hossein Nikzat" }, { name = "Faezeh Nikzat" }]
+dependencies = ["numpy", "pandas", "scipy", "xarray", "netCDF4", "matplotlib"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["ksdsm"]
